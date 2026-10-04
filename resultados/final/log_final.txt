@@ -1,0 +1,14 @@
+========================================================================
+TREINO FINAL — 2026-10-04 21:57:02
+========================================================================
+Amostras: 19879 | Épocas: 4 (mediana dos folds)
+Época 1/4 | loss=1.1879
+Época 2/4 | loss=1.1417
+Época 3/4 | loss=1.1096
+Época 4/4 | loss=1.0841
+Adapter salvo em: /content/drive/MyDrive/USP/PLN/BERT+LORA/resultados/final/lora_adapter
+Teste original: 900 linhas | colunas: ['resp_text', 'clarity']
+Teste para inferência: 900 amostras (vazios/textos curtos NÃO foram descartados)
+Distribuição predita: {np.str_('c234'): 270, np.str_('c5'): 349, np.str_('c1'): 281}
+✓ Validação pós-escrita: OK (linhas, colunas, rótulos e ordem)
+✓ Salvo em: /content/drive/MyDrive/USP/PLN/BERT+LORA/teste_rotulado.xlsx

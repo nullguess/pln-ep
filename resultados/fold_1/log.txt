@@ -1,0 +1,53 @@
+========================================================================
+FOLD 1
+========================================================================
+Treino: 15863 | Val: 4016
+Baseline LOCAL (limpo + hard): 0.4736
+
+--- BERT+LoRA ---
+Dispositivo: cuda
+GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition | VRAM: 102.0 GB
+Classes: ['c1', 'c234', 'c5']
+Treináveis: 5,310,723 / 114,236,166 (4.649%)
+Treino: 15863 | Val: 4016 | Batches/época: 992
+Pesos de classe: {np.str_('c1'): np.float64(0.9543), np.str_('c234'): np.float64(1.0165), np.str_('c5'): np.float64(1.0327)}
+LRs -> LoRA=5e-05 | Classifier=0.0001 | Steps: 4960 | warmup: 496
+  [diag] acc soft-argmax=0.4345 | acc original=0.4079
+Época 1/5 | loss=1.1913 | F1=0.4083 | Acc=0.4079 | MCC=0.1132
+   [diag] CE=1.0632 | ordinal=0.5764 | λ=0.2
+  [diag] acc soft-argmax=0.4544 | acc original=0.4340
+Época 2/5 | loss=1.1417 | F1=0.4352 | Acc=0.4340 | MCC=0.1512
+   [diag] CE=1.0046 | ordinal=0.5090 | λ=0.2
+  [diag] acc soft-argmax=0.4492 | acc original=0.4360
+Época 3/5 | loss=1.1042 | F1=0.4330 | Acc=0.4360 | MCC=0.1554
+   [diag] CE=1.0310 | ordinal=0.5333 | λ=0.2
+  [diag] acc soft-argmax=0.4796 | acc original=0.4492
+Época 4/5 | loss=1.0755 | F1=0.4442 | Acc=0.4492 | MCC=0.1737
+   [diag] CE=0.9719 | ordinal=0.4873 | λ=0.2
+  [diag] acc soft-argmax=0.4701 | acc original=0.4442
+Época 5/5 | loss=1.0493 | F1=0.4388 | Acc=0.4442 | MCC=0.1653
+   [diag] CE=0.9932 | ordinal=0.5102 | λ=0.2
+
+Melhor época: 4 | F1=0.4442 | Acc=0.4492
+Tempo do fold: 3.3 min
+
+RELATÓRIO BERT+LoRA:
+              precision    recall  f1-score   support
+
+          c1     0.4660    0.4946    0.4799      1290
+        c234     0.3895    0.3171    0.3496      1334
+          c5     0.4760    0.5338    0.5032      1392
+
+    accuracy                         0.4492      4016
+   macro avg     0.4438    0.4485    0.4442      4016
+weighted avg     0.4441    0.4492    0.4447      4016
+
+
+========================================================================
+COMPARAÇÃO
+========================================================================
+Baseline OFICIAL : 0.4582
+Baseline LOCAL   : 0.4736
+BERT+LoRA        : 0.4492
+Δ vs OFICIAL     : -0.0090
+Δ vs LOCAL       : -0.0244

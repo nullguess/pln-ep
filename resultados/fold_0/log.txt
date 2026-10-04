@@ -1,0 +1,53 @@
+========================================================================
+FOLD 0
+========================================================================
+Treino: 15886 | Val: 3993
+Baseline LOCAL (limpo + hard): 0.4728
+
+--- BERT+LoRA ---
+Dispositivo: cuda
+GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition | VRAM: 102.0 GB
+Classes: ['c1', 'c234', 'c5']
+Treináveis: 5,310,723 / 114,236,166 (4.649%)
+Treino: 15886 | Val: 3993 | Batches/época: 993
+Pesos de classe: {np.str_('c1'): np.float64(0.9367), np.str_('c234'): np.float64(1.028), np.str_('c5'): np.float64(1.042)}
+LRs -> LoRA=5e-05 | Classifier=0.0001 | Steps: 4965 | warmup: 496
+  [diag] acc soft-argmax=0.4478 | acc original=0.4195
+Época 1/5 | loss=1.1918 | F1=0.3701 | Acc=0.4195 | MCC=0.1536
+   [diag] CE=1.1145 | ordinal=0.4104 | λ=0.2
+  [diag] acc soft-argmax=0.4746 | acc original=0.4508
+Época 2/5 | loss=1.1495 | F1=0.4393 | Acc=0.4508 | MCC=0.1762
+   [diag] CE=1.1005 | ordinal=0.4454 | λ=0.2
+  [diag] acc soft-argmax=0.4666 | acc original=0.4520
+Época 3/5 | loss=1.1162 | F1=0.4317 | Acc=0.4520 | MCC=0.1800
+   [diag] CE=1.1330 | ordinal=0.4806 | λ=0.2
+  [diag] acc soft-argmax=0.4874 | acc original=0.4616
+Época 4/5 | loss=1.0860 | F1=0.4616 | Acc=0.4616 | MCC=0.1909
+   [diag] CE=1.1169 | ordinal=0.4666 | λ=0.2
+  [diag] acc soft-argmax=0.4741 | acc original=0.4523
+Época 5/5 | loss=1.0618 | F1=0.4457 | Acc=0.4523 | MCC=0.1774
+   [diag] CE=1.1458 | ordinal=0.4843 | λ=0.2
+
+Melhor época: 4 | F1=0.4616 | Acc=0.4616
+Tempo do fold: 3.3 min
+
+RELATÓRIO BERT+LoRA:
+              precision    recall  f1-score   support
+
+          c1     0.4615    0.4574    0.4594      1220
+        c234     0.4045    0.4160    0.4102      1375
+          c5     0.5204    0.5100    0.5152      1398
+
+    accuracy                         0.4616      3993
+   macro avg     0.4622    0.4611    0.4616      3993
+weighted avg     0.4625    0.4616    0.4620      3993
+
+
+========================================================================
+COMPARAÇÃO
+========================================================================
+Baseline OFICIAL : 0.4582
+Baseline LOCAL   : 0.4728
+BERT+LoRA        : 0.4616
+Δ vs OFICIAL     : +0.0034
+Δ vs LOCAL       : -0.0113
